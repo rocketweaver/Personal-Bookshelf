@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Bookshelf</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="w-100">
+      <div class="container">
+        <h1 id="brand">Personal <span>Bookshelf</span></h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="w-100 container" id="bookshelf-form">
+        <form action="#" class="shadow" id="form">
+          <h2 class="mb-4 form-title text-center">Masukkan Buku Baru</h2>
+          <div class="input-group mb-4">
+            <label for="judul" class="label" id="judul-label">Judul</label>
+            <input class="input" type="text" name="judul" id="judul" required />
+            <div class="input-line"></div>
+          </div>
+          <div class="input-group mb-4">
+            <label for="penulis" class="label" id="penulis-label"
+              >Penulis</label
+            >
+            <input
+              class="input"
+              type="text"
+              name="penulis"
+              id="penulis"
+              required
+            />
+            <div class="input-line"></div>
+          </div>
+          <div class="input-group mb-4">
+            <label for="tahun" class="label" id="tahun-label">Tahun</label>
+            <input
+              class="input"
+              type="number"
+              name="tahun"
+              min="0"
+              id="tahun"
+              required
+            />
+            <div class="input-line"></div>
+          </div>
+          <div class="input-checkbox mb-4">
+            <input type="checkbox" name="stat" id="stat" value="true" />
+            <label for="stat" id="stat-label">Sudah dibaca</label>
+          </div>
+          <input type="submit" id="submit" name="submit" value="Submit" />
+        </form>
+      </div>
+
+      <div class="search w-100 container">
+        <form action="#" class="shadow" id="search-form">
+          <input
+            type="text"
+            id="search"
+            name="search"
+            placeholder="Cari buku disini"
+          />
+
+          <input type="submit" value="Search" id="submit-search" />
+        </form>
+      </div>
+
+      <div class="book-list w-100">
+        <div class="container">
+          <section class="shadow completed">
+            <h2 class="text-center">Sudah Dibaca</h2>
+            <div class="item-list" id="completed-book"></div>
+          </section>
+          <section class="shadow uncompleted">
+            <h2 class="text-center">Belum Dibaca</h2>
+            <div class="item-list" id="uncompleted-book"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/input_form.js"></script>
+    <script src="js/system.js"></script>
+  </body>
+</html>
